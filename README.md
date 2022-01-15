@@ -61,3 +61,176 @@ There are nine different classes a genetic mutation can be classified into => Mu
 - Penalize the errors in class probabilites => Metric is Log-loss.
 - No Latency constraints.
 
+
+<h1>Summary of single features</h1>
+<p>Here is a Comparison of our models.</p>
+
+
+<table style="width:100%">
+  <tr>
+      <th></th>
+    <th>Vectorization</th>
+       <th>Feature</th>
+      
+  <th>Model</th>
+    <th>Logloss</th>
+      <th>Missclassified points</th>
+      
+      
+  </tr>
+  <tr>
+    <td></td>
+    <td>--</td>
+    <td>--</td>
+    <td>Random</td>
+    <td>2.59</td>
+       <td>--</td>
+       
+   </tr>
+  <tr>
+    <td></td>
+    <td>BoW</td>
+    <td>Gene</td>
+    <td>logistic regression</td>
+    <td>1.19</td>
+       <td>--</td>
+       
+   </tr>
+  <tr>
+   <td></td>
+    <td>BoW</td>
+    <td>Variation</td>
+    <td>logistic regression</td>
+    <td>1.68</td>
+       <td>--</td>
+        
+   </tr>
+  <tr>
+       <td></td>
+    <td>BoW</td>
+    <td>Text</td>
+    <td>logistic regression</td>
+    <td>1.20</td>
+       <td>--</td>
+     
+   
+  </tr>
+  
+  
+  
+   <tr>
+       <td></td>
+    <td>BoW</td>
+    <td>text</td>
+    <td>logistic regression</td>
+    <td>1.20</td>
+       <td>--</td>
+        
+   
+  </tr>
+   
+<table style="width:100%">
+<p style="font-size:24px;text-align:Center"> <b>Stacking the three types of features </b><p>
+
+
+
+ <tr>
+      <th></th>
+    <th>Vectorization</th>      
+  <th>Features</th>
+      <th>Model</th>
+    <th>Logloss</th>
+      <th>Missclassified points</th>
+      
+      
+ 
+  <tr>
+    <td></td>
+    <td>BoW</td>
+    <td>All 3</td>
+    <td>MultinomialNB</td>
+    <td>1.19</td>
+       <td>35%</td>
+       
+   </tr>
+  <tr>
+   <td></td>
+    <td>BoW</td>
+    <td>All 3</td>
+    <td>KNN</td>
+    <td>0.98</td>
+       <td>33%</td>
+        
+   </tr>
+  <tr>
+       <td></td>
+    <td>BoW</td>
+    <td>All 3</td>
+    <td>Logistic Regression With balanced class weight</td>
+    <td>1.15</td>
+       <td>31%</td>
+     
+   
+  </tr>
+  
+  
+  
+   <tr>
+       <td></td>
+    <td>BoW</td>
+    <td>All 3</td>
+    <td>Linear SVM</td>
+    <td>1.05</td>
+       <td>32%</td>
+   
+  </tr>
+   
+   
+   <tr>
+       <td></td>
+    <td>BoW</td>
+    <td>All 3</td>
+    <td>Random forests</td>
+    <td>1.20</td>
+       <td>41%</td>
+   
+  </tr>
+   
+   
+   <tr>
+       <td></td>
+    <td>Response Coding</td>
+    <td>All 3</td>
+    <td>Random forests</td>
+    <td>1.28</td>
+       <td>45%</td>
+   
+  </tr>
+  
+  
+   
+   <tr>
+       <td></td>
+    <td>BoW</td>
+    <td>All 3</td>
+    <td>Stacking Classifier</td>
+    <td>1.99</td>
+       <td>50%%</td>
+   
+  </tr>
+      
+   <tr>
+       <td></td>
+    <td>BoW</td>
+    <td>All 3</td>
+    <td>Maximum Voting Classifier</td>
+    <td>1.38</td>
+       <td>35%%</td>
+   
+  </tr>
+   
+   
+</table> 
+
+
+
