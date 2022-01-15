@@ -215,7 +215,7 @@ There are nine different classes a genetic mutation can be classified into => Mu
     <td>All 3</td>
     <td>Stacking Classifier</td>
     <td>1.99</td>
-       <td>50%%</td>
+       <td>50%</td>
    
   </tr>
       
@@ -225,7 +225,7 @@ There are nine different classes a genetic mutation can be classified into => Mu
     <td>All 3</td>
     <td>Maximum Voting Classifier</td>
     <td>1.38</td>
-       <td>35%%</td>
+       <td>35%</td>
    
   </tr>
    
